@@ -1,12 +1,20 @@
 package com.Hospital.Patient_Info.globalException;
 
-import java.time.LocalDateTime;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
-public class ErrorExceptionHandling extends RuntimeException{
+@ControllerAdvice
+public class ErrorExceptionHandling {
 
-	private LocalDateTime timeStamp;
-	private String message ;
+@ExceptionHandler(ResourceNotFoundException.class )	
+public ResponseEntity<?> errorResourceNotFound(ResourceNotFoundException ){
+		
+	ExceptionEntity exceptionEntity = new ExceptionEntity();
 	
+	
+	
+	}
 	
 	
 }

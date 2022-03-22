@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import javassist.NotFoundException;
 
 //@Controller
-//@ControllerAdvice
+@ControllerAdvice
 public class ExceptionHandlerController  extends ResponseEntityExceptionHandler{
 
 	@ExceptionHandler(value = NullPointerException.class)
